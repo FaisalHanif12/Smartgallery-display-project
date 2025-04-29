@@ -5,15 +5,15 @@ import './App.css'
 
 // App screenshots from public/Images folder
 const screenshots = [
-  { id: 1, src: '/Images/Image1.jpeg', alt: 'Smart Gallery Screenshot 1' },
-  { id: 2, src: '/Images/Image2.jpeg', alt: 'Smart Gallery Screenshot 2' },
-  { id: 3, src: '/Images/Image3.jpeg', alt: 'Smart Gallery Screenshot 3' },
-  { id: 4, src: '/Images/Image4.jpeg', alt: 'Smart Gallery Screenshot 4' },
-  { id: 5, src: '/Images/Image5.jpeg', alt: 'Smart Gallery Screenshot 5' },
-  { id: 6, src: '/Images/Image6.jpeg', alt: 'Smart Gallery Screenshot 6' },
-  { id: 7, src: '/Images/Image7.jpeg', alt: 'Smart Gallery Screenshot 7' },
-  { id: 8, src: '/Images/Image8.jpeg', alt: 'Smart Gallery Screenshot 8' },
-  { id: 9, src: '/Images/Image9.jpeg', alt: 'Smart Gallery Screenshot 9' },
+  { id: 1, src: '/Images/Image1.webp', alt: 'Smart Gallery Screenshot 1' },
+  { id: 2, src: '/Images/Image2.webp', alt: 'Smart Gallery Screenshot 2' },
+  { id: 3, src: '/Images/Image3.webp', alt: 'Smart Gallery Screenshot 3' },
+  { id: 4, src: '/Images/Image4.webp', alt: 'Smart Gallery Screenshot 4' },
+  { id: 5, src: '/Images/Image5.webp', alt: 'Smart Gallery Screenshot 5' },
+  { id: 6, src: '/Images/Image6.webp', alt: 'Smart Gallery Screenshot 6' },
+  { id: 7, src: '/Images/Image7.webp', alt: 'Smart Gallery Screenshot 7' },
+  { id: 8, src: '/Images/Image8.webp', alt: 'Smart Gallery Screenshot 8' },
+  { id: 9, src: '/Images/Image9.webp', alt: 'Smart Gallery Screenshot 9' },
 ];
 
 // Video from public/Vedio folder
@@ -109,7 +109,7 @@ const VideosSection = () => {
                 src={video.src} 
                 controls 
                 className="w-full h-full object-contain"
-                poster="/Images/Image1.jpeg"
+                poster="/Images/Image1.webp"
               ></video>
             </div>
             <div className="p-4 text-center">
@@ -167,7 +167,7 @@ const ThemeToggle = ({ darkMode, toggleDarkMode }) => {
 
 function App() {
   const [activeTab, setActiveTab] = useState('screenshots');
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -191,12 +191,12 @@ function App() {
         
         {/* Header Section */}
         <header className="text-center mb-10">
-          <h1 className={`text-5xl md:text-6xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-[#0f172a]'}`}>Smart Gallery</h1>
-          <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-500'}`}>Your AI-powered photo organizer</p>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-[#0f172a]'}`}>Smart Gallery</h1>
+          <p className={`text-base sm:text-lg ${darkMode ? 'text-gray-300' : 'text-gray-500'}`}>Your AI-powered photo organizer</p>
         </header>
 
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap justify-center gap-6 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12">
           <Tab 
             selected={activeTab === 'screenshots'} 
             onClick={() => setActiveTab('screenshots')}
